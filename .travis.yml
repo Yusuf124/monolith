@@ -15,15 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker-compose -f docker-compose-build.yaml build --parallel
-  - docker tag udagram-api-feed ypapy/udagram-api-feed:latest
-  - docker tag udagram-api-user ypapy/udagram-api-user:latest
-  - docker tag udagram-frontend ypapy/udagram-frontend:latest
-  - docker tag udagram-reverseproxy ypapy/udagram-reverseproxy:latest
+  - docker build -t udagram-api-feed ./udagram-api-feed
+  - docker tag udagram-api-feed ypapy/udagram-api-feed:v1
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push ypapy/udagram-api-feed:latest
-  - docker push ypapy/udagram-api-user:latest
-  - docker push ypapy/udagram-frontend:latest
-  - docker push ypapy/udagram-reverseproxy:latest
+  - docker push sudkul/udagram-api-feed:v1
