@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_MEDIA_BUCKET: arn:aws:s3:::yussuf-bucket-03
+  AWS_BUCKET: arn:aws:s3:::yussuf-bucket-03
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: testing
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: postgres.ctiesbtdton6.us-east-1.rds.amazonaws.com
+  URL: http://localhost:8100  
+  POSTGRES_USERNAME: postgres
+  POSTGRES_PASSWORD: postgres
+metadata:
+  name: env-config

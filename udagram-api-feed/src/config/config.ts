@@ -1,8 +1,8 @@
 export const config = {
-  'username': 'ypapy',
-  'password': 'Taufiq01*',
+  'username': 'postgres',
+  'password': 'postgres',
   'database': 'postgres',
-  'host': 'monolithmicroservice.crn3d9pz41du.us-east-1.rds.amazonaws.com',
+  'host': 'postgres.ctiesbtdton6.us-east-1.rds.amazonaws.com',
   'dialect': 'postgres',
   'aws_region': 'us-east-1',
   'aws_profile': process.env.AWS_PROFILE,

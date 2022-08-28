@@ -1,24 +1,25 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-api-feed
+  name: udagram-api-user
   labels:
-    app: udagram-api-feed
+    app: udagram-api-user
   namespace: default
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: udagram-api-feed
+      app: udagram-api-user
   template:
     metadata:
       labels:
-        app: udagram-api-feed
+        app: udagram-api-user
     spec:
       containers:
-      - image: ypapy/udagram-api-feed:v3
+      - image: ypapy/udagram-api-user:v3
         imagePullPolicy: Always
-        name: udagram-api-feed
+        name: udagram-api-user
         ports:
         - containerPort: 8080
         resources:
